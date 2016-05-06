@@ -1,0 +1,16 @@
+
+<div class="starter-template">
+    <h1>Camera</h1>
+    <p class="lead">Is streaming?</p>
+    <div class="onoffswitch">
+        <% if (camera.get('is_streaming')) { %>
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cameraswitch" checked>
+        <% } else { %>
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cameraswitch">
+        <% } %>
+        <label class="onoffswitch-label" for="cameraswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "Control",
+  "dependencies": {
+    "jquery": "latest",
+    "requirejs": "latest",
+    "underscore": "= 1.5.2",
+    "backbone": "= 1.1.0",
+    "firebase": "= 1.0.15"
+  },
+  "install" : {
+    "path" : "/"
+  },
+  "private": true
+}

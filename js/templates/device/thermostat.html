@@ -1,0 +1,20 @@
+<div id="thermostat">
+    <div id="screen">
+        <div id="target-temperature" class="home">
+            <div class="away">away</div>
+            <div class="home">
+                <span class="temp"><%=thermostat.get('temperature_scale') == 'F' ? thermostat.get('target_temperature_f') : thermostat.get('target_temperature_c')%></span>
+                <div class="hvac-mode">Mode: <%=thermostat.get('hvac_mode').toUpperCase()%></div>
+            </div>
+        </div>
+        <div id="ambient-temperature">
+            <span class="temp"><%=thermostat.get('temperature_scale') == 'F' ? thermostat.get('ambient_temperature_f') : thermostat.get('ambient_temperature_c')%></span>
+            <span class="temperature-scale"><%=thermostat.get('temperature_scale')%></span>
+        </div>
+    </div>
+    <button id="up-button">⬆</button>
+    <button id="down-button">⬇︎</button>
+    <div id="door">
+        <div id="device-name"><%=thermostat.get('name')%></div>
+    </div>
+</div>

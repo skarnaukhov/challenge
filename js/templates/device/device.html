@@ -1,0 +1,34 @@
+<div class="starter-template">
+    <h1>Devices List</h1>
+    <p class="lead"></p>
+    <table class="table">
+        <tr>
+            <th>Device</th>
+            <th>Device ID</th>
+            <th>Name</th>
+        </tr>
+        <% $.each(devices, function(deviceType, deviceList) {
+            $.each(deviceList, function(i, particularDevice){ %>
+        <tr align="left">
+
+            <td>
+                <% if (deviceType === 'cameras') { %>
+                <a href="#devices/<%=deviceType%>/<%=particularDevice.get('device_id')%>">
+                    <i class="fa fa-camera" aria-hidden="true"></i>
+                </a>
+                <% } else if (deviceType === 'thermostats') { %>
+                <a href="#devices/<%=deviceType%>/<%=particularDevice.get('device_id')%>">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                </a>
+                <% } %>
+            </td>
+            <td><%= particularDevice.get('device_id') %></td>
+            <td><%= particularDevice.get('name') %></td>
+
+        </tr>
+        <%
+            });
+        });
+        %>
+    </table>
+</div>
